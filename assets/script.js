@@ -48,18 +48,21 @@ const teamMembers = [
   }
 ];
 
+let cardContainer = document.getElementById('cardContainer'); // //seleziono il contenitore dove verranno inserite le card
+
 
 for (let i = 0; i < teamMembers.length; i++) {
-  // Estrai l'elemento corrente dall'array teamMembers
-  let teamMember = teamMembers[i];
   
-  //Estraggo le proprietà dell'oggetto in variabili separate
+  let teamMember = teamMembers[i]; //// estraggo l'elemento corrente dall'array teamMembers in ogni iterazione
+  
+ 
   let name = teamMember.name;
   let role = teamMember.role;
   let email = teamMember.email;
   let img = teamMember.img;
 
-  // Crea il markup HTML per il membro del team senza usare template literals
+  
+  
   let markup = 
     '<div class="col-md-4 col-lg-3">' +
       '<div class="card h-100">' +
@@ -72,7 +75,7 @@ for (let i = 0; i < teamMembers.length; i++) {
       '</div>' +
     '</div>';
 
-  // Inserisci il markup generato nel contenitore del team
-  teamContainer.innerHTML += markup
+  
+  cardContainer.innerHTML += markup // inserisco il markup generato nel contenitore del team
 
 }
